@@ -3,6 +3,7 @@ import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
 import NavigationBar from "./components/NavigationBar";
+import Footer from "./components/Footer";
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
         <Home id="Home" />
         <About id="About" />
         <Contact id="Contact" />
+        <Footer />
       </React.Fragment>
     );
   }

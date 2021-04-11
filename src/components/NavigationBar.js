@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Nav, Navbar } from "react-bootstrap";
 import styled from "styled-components";
+import { Nav, Navbar } from "react-bootstrap";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 const menuItems = [
@@ -57,7 +57,7 @@ export default class NavigationBar extends Component {
             <Nav className="ml-auto">
               {menuItems.map((item, index) => {
                 return (
-                  <Nav.Item>
+                  <Nav.Item key={index}>
                     <Link
                       activeClass="active"
                       to={item.to}
