@@ -2,9 +2,9 @@ import React from "react";
 import { Jumbotron } from "../components/Jumbotron";
 import { Layout } from "../components/Layout";
 
-export const Home = () => {
+export const Home = (props) => {
   return (
-    <div>
+    <div id={props.id}>
       <Jumbotron />
       <Layout>
         <h1>Home</h1>
