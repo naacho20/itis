@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import styles from "styled-components";
-import {
-  AiFillGithub,
-  AiFillLinkedin,
-  AiFillGoogleCircle,
-} from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { Link } from "react-scroll";
 
 const menuItems = [
@@ -30,11 +26,14 @@ const Styles = styles.div`
     }
 
     ul>li>a {
-        color:white;
+        color:#fff;
     }
 
     .icon {
-
+      height: 2.3rem;
+      width: 2.3rem;
+      color: #fff;
+      margin-right: 15px;
     }
 `;
 
@@ -50,7 +49,7 @@ export default class NavigationBar extends Component {
                 <ul class="list-unstyled">
                   {menuItems.map((item, index) => {
                     return (
-                      <li key={index} style={{ marginTop: 10 }}>
+                      <li key={index} className="mt-3">
                         <Link
                           to={item.to}
                           spy={true}
@@ -74,14 +73,7 @@ export default class NavigationBar extends Component {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <AiFillGithub
-                      style={{
-                        height: "2.3rem",
-                        width: "2.3rem",
-                        color: "white",
-                        marginRight: 15,
-                      }}
-                    />
+                    <AiFillGithub className="icon" />
                   </a>
                 </span>
                 <span>
@@ -90,14 +82,7 @@ export default class NavigationBar extends Component {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <AiFillLinkedin
-                      style={{
-                        height: "2.3rem",
-                        width: "2.3rem",
-                        color: "white",
-                        marginRight: 15,
-                      }}
-                    />
+                    <AiFillLinkedin className="icon" />
                   </a>
                 </span>
               </Col>

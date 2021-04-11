@@ -37,6 +37,10 @@ const Styles = styled.div`
     align-items: center;
     text-align: center;
   }
+
+  .jumboTitle > h1 {
+    font-size: 5rem;
+  }
 `;
 
 export const Jumbotron = () => {
@@ -46,10 +50,8 @@ export const Jumbotron = () => {
         <div className="overlay"></div>
         <Container className="jumboTitle">
           <h1>IT.IS</h1>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam,
-            molestias.
-          </p>
+          <h5>Bienvenidos a mi sitio web!</h5>
+          <p>En este voy a comentarles un poco sobre mí y mis proyectos.</p>
         </Container>
       </Jumbo>
     </Styles>
