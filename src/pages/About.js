@@ -1,5 +1,4 @@
 import React from "react";
-import { Layout } from "../components/Layout";
 import {
   Container,
   Row,
@@ -25,10 +24,18 @@ export const About = (props) => {
     <Styles>
       <Container id={props.id} style={{ paddingBottom: 90, paddingTop: 90 }}>
         <Row>
-          <Col style={{ paddingLeft: 30, paddingRight: 30 }}>
+          <Col
+            sm={12}
+            md={6}
+            style={{ paddingLeft: 30, paddingRight: 30, marginTop: 15 }}
+          >
             <Image fluid src={imgPersona} rounded />
           </Col>
-          <Col style={{ paddingLeft: 30, paddingRight: 30 }}>
+          <Col
+            sm={12}
+            md={6}
+            style={{ paddingLeft: 30, paddingRight: 30, marginTop: 15 }}
+          >
             <h3>BIENVENIDO A MI SITIO</h3>
             <Dropdown.Divider style={{ marginBottom: 35, marginTop: 25 }} />
             <p>
@@ -55,7 +62,7 @@ export const About = (props) => {
             </p>
           </Col>
         </Row>
-        <Row style={{ marginTop: 35 }}>
+        <Row style={{ marginTop: 55 }}>
           <Col style={{ paddingLeft: 30, paddingRight: 30 }}>
             <h3>MIS SKILLS</h3>
             <Dropdown.Divider style={{ marginBottom: 35, marginTop: 25 }} />
