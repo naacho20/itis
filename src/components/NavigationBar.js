@@ -44,7 +44,11 @@ export default class NavigationBar extends Component {
   render() {
     return (
       <Styles>
-        <Navbar expand="lg" fixed="top">
+        <Navbar
+          expand="lg"
+          fixed="top"
+          className="shadow-sm p-3 mb-5 bg-white rounded"
+        >
           <Navbar.Brand onClick={this.scrollToTop} href="#">
             IT.IS
           </Navbar.Brand>
