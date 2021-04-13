@@ -4,8 +4,7 @@ import styles from "styled-components";
 import { AiTwotonePhone } from "react-icons/ai";
 import { BsEnvelopeOpen } from "react-icons/bs";
 import axios from "axios";
-import { ModalComponent } from "../components/ModalComponent";
-import { Modal } from "react-bootstrap";
+import { Toast } from "react-bootstrap";
 
 const Styles = styles.div`
   h3, h6, p, .icon {
@@ -43,12 +42,19 @@ class Contact extends React.Component {
       email: "",
       message: "",
       subject: "",
+      showModal: false,
+      succesSend: true,
+      showToast: false,
     };
   }
   render() {
     return (
       <Styles>
-        <Container id={this.props.id} className="contenedor">
+        <Container
+          id={this.props.id}
+          className="contenedor"
+          style={{ position: "relative", minHeight: 100 }}
+        >
           <Row className="justify-content-md-center">
             <Col md={6} className="text-center">
               <h3>CONTACTATE CONMIGO</h3>
@@ -78,6 +84,30 @@ class Contact extends React.Component {
             method="POST"
           >
             <Row className="fila">
+              <Toast
+                show={this.state.showToast}
+                delay={2500}
+                autohide
+                onClose={() => {
+                  this.setState({ showToast: false });
+                }}
+                className={this.state.succesSend ? "bg-success" : "bg-danger"}
+                style={{
+                  position: "absolute",
+                  right: 0,
+                  color: "white",
+                  zIndex: 50,
+                }}
+              >
+                <Toast.Header closeButton="false">
+                  {this.state.succesSend ? "ÉXITO" : "ERROR"}
+                </Toast.Header>
+                <Toast.Body>
+                  {this.state.succesSend
+                    ? "La consulta se envió con éxito"
+                    : "Hubo un error al enviar la consulta"}
+                </Toast.Body>
+              </Toast>
               <Col sm={12} md={6}>
                 <Form.Group>
                   <Form.Label htmlFor="name">Nombre</Form.Label>
@@ -159,25 +189,22 @@ class Contact extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
     axios({
       method: "POST",
       url: "https://itis-mailer.herokuapp.com/send",
       data: this.state,
     }).then((response) => {
       if (response.data.status === "success") {
-        <Modal.Dialog>
-          <Modal.Header closeButton>
-            <Modal.Title>Exito</Modal.Title>
-          </Modal.Header>
-
-          <Modal.Body>
-            <p>La consulta fue enviada.</p>
-          </Modal.Body>
-        </Modal.Dialog>;
+        this.setState({
+          showToast: true,
+          succesSend: true,
+        });
         this.resetForm();
       } else if (response.data.status === "fail") {
-        alert("Error al enviar el mensaje");
+        this.setState({
+          showToast: true,
+          succesSend: false,
+        });
       }
     });
   }
