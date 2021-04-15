@@ -4,7 +4,7 @@ import { About } from "./pages/About";
 import Contact from "./pages/Contact";
 import NavigationBar from "./components/NavigationBar";
 import Footer from "./components/Footer";
-
+import "./assets/css/App.css";
 class App extends Component {
   render() {
     return (

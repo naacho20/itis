@@ -1,5 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
 
 body {
-  font-family: "Roboto", "Courier New", Courier, monospace;
+  font-family: "Roboto";
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
+  margin: 10px 0;
+  width: 50%;
+  background-color: purple;
+}
+
+.timeline-item:nth-child(0) {
+  align-self: flex-end;
 }

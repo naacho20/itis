@@ -9,6 +9,7 @@ import {
 } from "react-bootstrap";
 import imgPersona from "../assets/img/person2.jpg";
 import styles from "styled-components";
+import TimelineComponent from "../components/Timeline";
 
 const Styles = styles.div`
   h3, p {
@@ -37,6 +38,10 @@ const Styles = styles.div`
 
   .fila {
     margin-top: 55px;
+  }
+
+  .paper {
+    padding: 6px 16px;
   }
 `;
 
@@ -113,6 +118,13 @@ export const About = (props) => {
               <ProgressBar variant="dark" label="MongoDB" now={65} />
             </div>
           </Col>
+        </Row>
+        <Row className="fila" style={{ justifyContent: "center" }}>
+          <Col className="columna" xs={12}>
+            <h3>TIMELINE</h3>
+            <Dropdown.Divider className="divisor" />
+          </Col>
+          <TimelineComponent />
         </Row>
       </Container>
     </Styles>
