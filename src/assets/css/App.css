@@ -3,16 +3,3 @@
 body {
   font-family: "Roboto";
 }
-
-.timeline-item {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 30px;
-  margin: 10px 0;
-  width: 50%;
-  background-color: purple;
-}
-
-.timeline-item:nth-child(0) {
-  align-self: flex-end;
-}

@@ -59,3 +59,42 @@ export const dataTimeLine = [
     },
   },
 ];
+
+export const dataSkills = [
+  {
+    label: "C#",
+    now: "85",
+  },
+  {
+    label: "ASP.NET WebForms",
+    now: "70",
+  },
+  {
+    label: "ASP.NET MVC",
+    now: "75",
+  },
+  {
+    label: "HTML / CSS / JQUERY",
+    now: "80",
+  },
+  {
+    label: "SQL SERVER",
+    now: "70",
+  },
+  {
+    label: "ReactJS",
+    now: "65",
+  },
+  {
+    label: "ReactJS",
+    now: "65",
+  },
+  {
+    label: "Node",
+    now: "65",
+  },
+  {
+    label: "MongoDB",
+    now: "65",
+  },
+];

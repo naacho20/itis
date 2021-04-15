@@ -1,24 +1,14 @@
 import React from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Image,
-  Dropdown,
-  ProgressBar,
-} from "react-bootstrap";
+import { Container, Row, Col, Image, Dropdown } from "react-bootstrap";
 import imgPersona from "../assets/img/person2.jpg";
 import styles from "styled-components";
 import TimelineComponent from "../components/Timeline";
+import ProgressBarComponent from "../components/ProgressBarComponent";
 
 const Styles = styles.div`
   h3, p {
     color: #7e7e7e;
-  },
-
-  .mt35 {
-    margin-top: 35px;
-  }  
+  }, 
 
   .contenedor {
     padding-bottom: 90px;
@@ -38,10 +28,6 @@ const Styles = styles.div`
 
   .fila {
     margin-top: 55px;
-  }
-
-  .paper {
-    padding: 6px 16px;
   }
 `;
 
@@ -89,34 +75,7 @@ export const About = (props) => {
           <Col className="columna">
             <h3>MIS SKILLS</h3>
             <Dropdown.Divider className="divisor" />
-            <div>
-              <ProgressBar variant="dark" label="C#" now={85} />
-            </div>
-            <div className="mt35">
-              <ProgressBar variant="dark" label="ASP.NET WebForms" now={70} />
-            </div>
-            <div className="mt35">
-              <ProgressBar variant="dark" label="ASP.NET MVC" now={75} />
-            </div>
-            <div className="mt35">
-              <ProgressBar
-                variant="dark"
-                label="HTML / CSS / JQUERY"
-                now={80}
-              />
-            </div>
-            <div className="mt35">
-              <ProgressBar variant="dark" label="SQL SERVER" now={70} />
-            </div>
-            <div className="mt35">
-              <ProgressBar variant="dark" label="ReactJS" now={65} />
-            </div>
-            <div className="mt35">
-              <ProgressBar variant="dark" label="Node" now={65} />
-            </div>
-            <div className="mt35">
-              <ProgressBar variant="dark" label="MongoDB" now={65} />
-            </div>
+            <ProgressBarComponent />
           </Col>
         </Row>
         <Row className="fila" style={{ justifyContent: "center" }}>
