@@ -2,21 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Nav, Navbar } from "react-bootstrap";
 import { Link, animateScroll as scroll } from "react-scroll";
-
-const menuItems = [
-  {
-    to: "Home",
-    title: "Inicio",
-  },
-  {
-    to: "About",
-    title: "Sobre mí",
-  },
-  {
-    to: "Contact",
-    title: "Contacto",
-  },
-];
+import { menuItems } from "../assets/info/data";
 
 const Styles = styled.div`
   .navbar {

@@ -98,3 +98,22 @@ export const dataSkills = [
     now: "65",
   },
 ];
+
+export const menuItems = [
+  {
+    to: "Home",
+    title: "Inicio",
+  },
+  {
+    to: "About",
+    title: "Sobre mí",
+  },
+  // {
+  //   to: "Home",
+  //   title: "Portfolio",
+  // },
+  {
+    to: "Contact",
+    title: "Contacto",
+  },
+];

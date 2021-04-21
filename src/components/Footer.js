@@ -3,21 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import styles from "styled-components";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { Link } from "react-scroll";
-
-const menuItems = [
-  {
-    to: "Home",
-    title: "Inicio",
-  },
-  {
-    to: "About",
-    title: "Sobre mí",
-  },
-  {
-    to: "Contact",
-    title: "Contacto",
-  },
-];
+import { menuItems } from "../assets/info/data";
 
 const Styles = styles.div`
     h5 {
