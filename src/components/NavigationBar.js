@@ -33,7 +33,7 @@ export default class NavigationBar extends Component {
         <Navbar
           expand="lg"
           fixed="top"
-          className="shadow-sm p-3 mb-5 bg-white rounded"
+          className="shadow-sm p-3 mb-5 bg-white"
         >
           <Navbar.Brand onClick={this.scrollToTop} href="#">
             IT.IS
